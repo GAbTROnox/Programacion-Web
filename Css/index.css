@@ -1,0 +1,250 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base más legible */
+    background-color: rgb(243, 240, 236);
+}
+
+/*heder*/
+header {
+    background-color: rgba(0, 0, 0, 0.4); /* Transparencia elegante */
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border: none; /* Elimina cualquier rayita residual */
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grupo-izquierdo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Evitamos que este div ocupe más espacio del necesario */
+    flex: 0 1 auto;
+}
+
+.logo {
+    border: none !important;
+    outline: none !important;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    display: block; /* Quita espacios fantasma debajo de la imagen */
+}
+
+.referencias {
+    display: flex;
+    gap: 20px;
+}
+
+.referencias p, .referencias a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.titulo {
+    color: white; /* Cambiado a blanco para que se vea en el fondo transparente */
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-style: italic;
+    pointer-events: none; /* El título no necesita clics */
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    z-index: 1001; /* Asegura que estén por encima de todo */
+}
+
+.botones button {
+    cursor: pointer !important;
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 11px;
+    transition: background 0.3s;
+}
+
+.botones button:hover {
+    background-color: #5a005a;
+}
+
+/* --- Ajuste del Video --- */
+.contenedorVideo {
+    width: 100%;
+    height: 100vh; /* Opcional: que el video ocupe toda la pantalla inicial */
+    overflow: hidden;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.introduccion {
+    padding: 60px 20%;
+    text-align: center;
+}
+
+.introduccion p {
+    font-size: 22px;
+    line-height: 1.6;
+    font-family: cursive;
+}
+
+.introduccion button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #800080;
+    color: white;
+    font-family: cursive;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.produccion {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.produccion img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Grid de Productos */
+.seccion-titulo {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 45px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+
+.producto-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-card p {
+    font-family: cursive;
+    font-size: 16px;
+    text-align: center;
+    margin: 15px 0;
+    flex-grow: 1;
+}
+
+.btn-agregar {
+    padding: 10px 20px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Carrito */
+.carrito {
+    background-color: white;
+    border: 2px solid #800080;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+/* Modal */
+#modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-contenido input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+.pie-pagina {
+    background-color: #3d5a4d;
+    color: #e0d4be;
+    padding: 40px 10%;
+}
+
+.superior {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.superior ul { list-style: none; margin-top: 10px; }
+
+.inferior {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}

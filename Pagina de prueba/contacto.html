@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - El Rincón del Café</title>
+    <link rel="stylesheet" href="/Css/contacto.css">
+</head>
+<body>
+
+    <header>
+        <section class="encabezado">
+            <div class="grupo-izquierdo">
+                <div class="logo">
+                    <a href="index.html"><img src="/Imagenes/logo.webp" alt="Logo"></a>
+                </div>
+                <nav class="referencias">
+                    <a href="index.html">INICIO</a>
+                    <p>PRODUCTOS</p>
+                    <p>NOSOTROS</p>
+                </nav>
+            </div>
+            <h1 class="titulo">CONTÁCTANOS</h1>
+            <div class="botones">
+                <button>MI CUENTA</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="contacto-main">
+        <section class="formulario-seccion">
+            <h2>Envíanos un mensaje</h2>
+            <p>Nos encantaría saber de ti. Cuéntanos qué café te gusta más o haz tus consultas.</p>
+            
+            <form id="formContacto">
+                <div class="campo">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="campo">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="campo">
+                    <label>Asunto</label>
+                    <select id="asunto">
+                        <option value="consulta">Consulta General</option>
+                        <option value="pedido">Pedido Especial</option>
+                        <option value="queja">Sugerencia</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>Mensaje</label>
+                    <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">ENVIAR MENSAJE</button>
+            </form>
+        </section>
+
+        <section class="info-adicional">
+            <div class="tarjeta-info">
+                <h3>Nuestra Ubicación</h3>
+                <p>Calle 6 de Obrajes #591</p>
+                <p>La Paz - Bolivia</p>
+            </div>
+            <div class="tarjeta-info">
+                <h3>Horarios de Atención</h3>
+                <p>Lunes a Viernes: 08:00 - 20:00</p>
+                <p>Sábados: 09:00 - 18:00</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/Js/contacto.js"></script>
+</body>
+</html>
