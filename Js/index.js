@@ -1,4 +1,3 @@
-// Variables globales del carrito
 var carrito = [];
 var total = 0;
  
@@ -28,9 +27,7 @@ function vaciarCarrito() {
  
     document.getElementById("total").textContent = "0.00";
 }
- 
-// --- FUNCIONES DEL MODAL ---
- 
+
 function abrirModal() {
     document.getElementById("modal").style.display = "flex";
 }
@@ -44,7 +41,6 @@ function enviarFormulario() {
     var email   = document.getElementById("inputEmail").value;
     var mensaje = document.getElementById("inputMensaje").value;
  
-    // Validación básica
     if (nombre === "" || email === "" || mensaje === "") {
         alert("Por favor, completa todos los campos del formulario.");
         return;
@@ -52,7 +48,6 @@ function enviarFormulario() {
  
     alert("¡Gracias " + nombre + "! Hemos recibido tu mensaje. Te responderemos a " + email);
     
-    // Limpiar campos y cerrar
     document.getElementById("inputNombre").value  = "";
     document.getElementById("inputEmail").value   = "";
     document.getElementById("inputMensaje").value = "";
